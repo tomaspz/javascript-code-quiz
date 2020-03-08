@@ -1,0 +1,52 @@
+/* HEADER STYLING */
+
+header {
+    margin: 20px;
+}
+
+#timer {
+    width: 100px;
+    background-color: aqua;
+    border: 1px solid gray;
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+
+#score {
+    width: 100px;
+    background-color: aqua;
+    border: 1px solid gray;
+    display: inline-block;
+    float: right;
+    text-align: center;
+}
+
+#startStop {
+    position: absolute;
+    margin: auto 300px;
+    width: 400px;
+    height: 200px;
+}
+
+#startQuiz {
+    display: inline-block;
+    float: left;
+    width: 100px;
+    height: 50px;
+    background-color: blanchedalmond;
+}
+
+#endQuiz {
+    display: inline-block;
+    float: rigth;
+    margin-left: 20px;
+    width: 100px;
+    height: 50px;
+    background-color: blanchedalmond;
+}
+
+/* MAIN BODY STYLING */
+
+
+/* FOOTR STYLING */
