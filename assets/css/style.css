@@ -1,49 +1,35 @@
 /* HEADER STYLING */
 
 header {
-    margin: 20px;
+    margin: 10px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+main {
+    margin: 100px;
 }
 
 #timer {
-    width: 100px;
-    background-color: aqua;
-    border: 1px solid gray;
-    display: inline-block;
-    float: left;
-    text-align: center;
+    padding: 20px 40px;
 }
 
 #score {
-    width: 100px;
-    background-color: aqua;
-    border: 1px solid gray;
-    display: inline-block;
-    float: right;
-    text-align: center;
+    padding: 20px 40px;
 }
 
-#startStop {
-    position: absolute;
-    margin: auto 300px;
-    width: 400px;
-    height: 200px;
+#divStartStop {
+ 
 }
 
-#startQuiz {
-    display: inline-block;
-    float: left;
-    width: 100px;
-    height: 50px;
-    background-color: blanchedalmond;
+#startButton {
+
 }
 
-#endQuiz {
-    display: inline-block;
-    float: rigth;
-    margin-left: 20px;
-    width: 100px;
-    height: 50px;
-    background-color: blanchedalmond;
+#stopButton {
+
 }
 
 /* MAIN BODY STYLING */

@@ -10,50 +10,85 @@
         <meta name="description" content="This javascript code quiz is a complete a coding assessment made with Web APIs.
         The quiz is a combination of multiple-choice questions and interactive challenges.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
 
-        <header>
-
-            <div id="timer">
-                <p>Timer</p>
-            </div>
-            
-            <div id="score">
-                <p>Score</p>
-            </div>
-            
-            <div id="startStop">
-                <button type="button" name="Start Quiz" id="startQuiz" class="btn btn-primary">Start Quiz</button>
-                <button type="button" name="End Quiz" id="endQuiz" class="btn btn-primary">End Quiz</button>
-            </div>
-
-        </header>
-
-        <main class="container">
-            <secction class="row">
-                <div id="quiz" class="col-xs-1-12">
-                    <h1></h1>
-                    <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn btn-primary">
-                            <input type="checkbox" name="" id="checkbox1" checked autocomplete="off">
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="checkbox" name="" id="checkbox2" autocomplete="off">
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="checkbox" name="" id="checkbox3" autocomplete="off">
-                        </label>
-                    </div>
-                    <a name="" id="" class="btn btn-primary" href="#" role="button"></a>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 h4 text-center">
+                    <h4>Timer</h4>
+                    <button type="button" id="timer" class="btn btn-default btn-lg"></button>
                 </div>
+                
+                <h1 class="col-md-8 justify-content-center">Javascript Code Quiz</h1>
+
+                <div class="col-md-2 h4 text-center">
+                    <h4>Score</h4>
+                    <button type="button" id="score" class="btn btn-default btn-lg"></button>
+                </div>
+                
+            </div> 
+        </header>
+      
+        <main class="container-fluid"> 
+            
+            <section>
+
+                <div  class="row">
+                    <div id="quiz" class="col-md-12">
+                        <h4 id="question"></h4>
+                    </div>
+                </div> <!-- End of row -->
+                
+                <div class="row">
+                    <div class="answers">
+
+                    </div>
+
+                    <!-- <div class="col-lg-6">
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" aria-label="...">
+                        </span>
+                        <input type="text" class="form-control" aria-label="...">
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                            <input type="checkbox" aria-label="...">
+                            </span>
+                            <input type="text" class="form-control" aria-label="...">
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                            <input type="checkbox" aria-label="...">
+                            </span>
+                            <input type="text" class="form-control" aria-label="...">
+                        </div>
+                    </div> -->
+                    
+                </div>  <!-- End of row -->
+                
             </section>
+           
         </main>
-
+        
         <footer>
-
-
+            <div id="divStartStop">
+                <button type="button" name="Start Quiz" id="startButton" class="btn">Start Quiz</button>
+                <button type="button" name="End Quiz" id="stopButton" class="btn">End Quiz</button>
+            </div>
         </footer>
 
 
@@ -63,8 +98,10 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <script src="./assets/js/script.js" async defer>
-            
-        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+        <script src="./assets/js/script.js" async defer></script>
     </body>
 </html>
