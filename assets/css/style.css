@@ -14,22 +14,37 @@ main {
 
 #timer {
     padding: 20px 40px;
+    background-color: lightgoldenrodyellow;
 }
 
 #score {
     padding: 20px 40px;
+    background-color: lightgoldenrodyellow;
 }
 
 #divStartStop {
- 
+    height: 50px;
+    margin: 0px 20px;
 }
 
 #startButton {
-
+    border: 1px solid darkgreen;
+    border-radius: 10px;
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 #stopButton {
+    border: 1px solid darkred;
+    border-radius: 10px;
+    background-color: rgb(224, 126, 96);
+    font-weight: bold;
+    font-size: 20px;
+}
 
+.container-fluid {
+    margin-top: 20px;
 }
 
 /* MAIN BODY STYLING */

@@ -11,12 +11,12 @@ var stopTest = document.getElementById("stopButton");
 
 var timer = document.getElementById("timer");
 
-var testTime = 120;     // this is a 2 min test
+var testTime = 0;     // the time of the test will increase every second 
 var testScore = 0;      // the test score starts at 0 points
 
 function setTimer() {                                          // function name
     var timerInterval = setInterval(function() {
-      testTime--;                                            // decrease secondsLeft by 1 
+      testTime++;                                            // decrease secondsLeft by 1 
       timer.innerHTML = testTime ;   // write secondsLeft on screen
   
       if(testTime === 0) {                   // when secondsLeft is zero
