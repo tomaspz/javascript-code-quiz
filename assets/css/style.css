@@ -13,13 +13,15 @@ main {
 }
 
 #timer {
-    padding: 20px 40px;
-    background-color: lightgoldenrodyellow;
+    padding: 20px 55px;
+    background-color: rgb(245, 245, 222);
+    border: 1px solid black;
 }
 
 #score {
-    padding: 20px 40px;
-    background-color: lightgoldenrodyellow;
+    padding: 20px 55px;
+    background-color: rgb(245, 245, 222);
+    border: 1px solid black;
 }
 
 #divStartStop {
@@ -45,9 +47,17 @@ main {
 
 .container-fluid {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* MAIN BODY STYLING */
 
+#questionTitle {
+    background-color: rgb(245, 245, 222);
+    margin: auto 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 300px;
+}
 
 /* FOOTR STYLING */
