@@ -13,13 +13,13 @@ main {
 }
 
 #timer {
-    padding: 20px 55px;
+    padding: 10px 25px;
     background-color: rgb(245, 245, 222);
     border: 1px solid black;
 }
 
 #score {
-    padding: 20px 55px;
+    padding: 10px 25px;
     background-color: rgb(245, 245, 222);
     border: 1px solid black;
 }
@@ -27,22 +27,30 @@ main {
 #divStartStop {
     height: 50px;
     margin: 0px 20px;
+    margin-bottom: 30px;
 }
 
 #startButton {
     border: 1px solid darkgreen;
     border-radius: 10px;
     background-color: lightgreen;
-    font-weight: bold;
     font-size: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 #stopButton {
     border: 1px solid darkred;
     border-radius: 10px;
     background-color: rgb(224, 126, 96);
-    font-weight: bold;
     font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+#checkButton {
+    border: 1px solid blue;
+    border-radius: 10px;
 }
 
 .container-fluid {
@@ -54,10 +62,48 @@ main {
 
 #questionTitle {
     background-color: rgb(245, 245, 222);
-    margin: auto 20px;
+    margin: 10px 20px;
     border: 1px solid black;
     border-radius: 10px;
     height: 300px;
 }
 
-/* FOOTR STYLING */
+#quiz {
+    
+}
+#question {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+#sec {
+    height: 80%;
+}
+#answers {
+    margin-left: 50px;
+}
+
+input {
+    margin-left: 50px;
+    width: 90%;
+    height: 80%;
+}
+
+.form-check {
+    margin-top: 20px;
+    margin-left: 50px;
+    height: 60px;
+}
+
+label {
+    margin-left: 20px;
+}
+
+
+/* FOOTER STYLING */
+
+footer {
+    padding-top: 40px;
+}
