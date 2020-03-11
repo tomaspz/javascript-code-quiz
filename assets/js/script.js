@@ -1,76 +1,51 @@
-// document.write('<script src="./quizQuestions.js" type="text/javascript"></script>');
-// import { quizQuestions } from './quizQuestions.js';         
-// $.getScript("./quizQuestions.js");
-// I tried to load the quizQuestions file in this file, but unfortunately Javascript does not have this feature natively.
-
-// GRAB DOM ELEMENTS, IDs, AND/OR CLASSES
+// GRAB DOM NODES
 
 var quizContainerEl = document.getElementById('quiz');        
 var questionEl = document.getElementById('question');
 var answersEl = document.getElementById('answers');
+
+var input = document.getElementsByTagName('input');
+var checkButton = document.getElementById('checkButton');
+
 var startTestEl = document.getElementById("startButton");
 var stopTestEl = document.getElementById("stopButton");
 var timerEl = document.getElementById("timer");
 
-var radioButton = document.createElement("input");
-
-var source = {
-    type: 'radio',
-    name: 'name',
-    value: 'value',
-    label: 'label',
-    onclick: function checked () {
-      if(radioButton.checked = true){
-          //do something
-      }else {
-        // do something else
-      };
-    }
-};
-
-Object.assign(radioButton, source);
-
-var choices = ["a", "b", "c"];
-for(var i =0; i<choices.length; i++) {
-    source.name = choices[i];
-    source.value = quizQuestions.answers.choices[i];
-    source.label = quizQuestions.answers.choices[i];
-}
-
-document.body.appendChild(radioButton);
-
-
+var count = 0;
 var testTime = 0;     // the time of the test will increase every second 
 var testScore = 0;      // the test score starts at 0 points
 
-function setTimer() {                                 // function name
+function setTimer() {                              
+    
     var timerInterval = setInterval(function() {
       testTime++;                      // decrease secondsLeft by 1 
       timerEl.textContent = testTime ;   // write secondsLeft on screen
   
       if(testTime === 20) {                   // when secondsLeft is zero
+        alert("Sorry, your time is up!");
         clearInterval(timerInterval);         // clear the interval "timerInterval"
-        alert("Your time is up!");
-        // stopTest();               // send a message and creates and image
+        
+        // stopTest();               
       }
   
     }, 1000);   // Time in miliseconds (always). 1000 ms = 1 sec --> It runs once every second
   }
 
-function setScore(){
-    var scoreInterval = setInterval(function(){
-        if(answer === quizQuestionscorrectAnswer[testScore].correctAnswer){
-            testScore++;
-        } else {
-            alert("Wrong!");
-            clearInterval(scoreInterval);
-            // stopTest();
-        }
-    })
+// function setScore(){
+//     var scoreInterval = setInterval(function(){
+//         if(answer === quizQuestionscorrectAnswer[testScore].correctAnswer){
+//             testScore++;
+//         } else {
+//             alert("Wrong!");
+//             clearInterval(scoreInterval);
+//             // stopTest();
+//         }
+//     })
 
-}
+// }
 
 function startQuiz() {
+    count = 0;
     displayQuestionWithAnswers();
     setTimer();
     // setScore();
@@ -80,39 +55,60 @@ function stopQuiz(){
 
 };
 
-function createRadioButtons(El, arr){
-    var threeLines = El.textContent;
-    for(var i=0; i<3; i++){  
-        threeLines += radioButton
-        `<input type="radio" name="question${i+1}" value="${arr[i].answers[choices[i]]}"><label>${choices[i]}": "${arr[i].answers[choices[i]]}"."</label><br>`;
+function displayQuestionWithAnswers(){   
+    
+    questionEl.textContent = "Question " + (count+1) + ": " + quizQuestions[count].question + "";
+    
+    var options = ["a", "b", "c"];
+    var divElem = document.createElement('div');                // create the input element dynamically
+    
+    for (var i=0; i<options.length; i++){
+        divElem.innerHTML += 
+        `<div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="`+options[i]+`" name="question`+(count+1)+`">
+        <label class="custom-control-label" for="`+options[i]+`">`+ quizQuestions[count].answers[i] +`</label>
+        </div>`;
+        console.log(divElem);
+        answersEl.appendChild(divElem);
     }
-    console.log(threeLines);
-    return threeLines;
-}
-
-function displayQuestionWithAnswers(){
-    var count = 0;
-    var showQuestionWithAnswers = setInterval(function(){
-        questionEl.textContent = "Question " + count+1 + ": " + quizQuestions[count].question + "?";
-        createRadioButtons(answersEl, quizQuestions);
-
-        clearInterval(showQuestionWithAnswers);
-        // if(quizQuestions[count].answers === quizQuestions[count].correctAnswer) {
-        //     testScore++;
-        //     alert("Correct!");
-        // } else {
-        //     clearInterval(showQuestionWithAnswers);
-        //     alert("Wrong!");
-        // }
-    }, 1000)
     
-}
-
-function checkResponse(){
     
+    
+    // `'<input type='radio' name='options' value='`+options[count]+`'></input><label>'`+options[count]+`': '`+ quizQuestions[count].answers[0] + `'</label><br>'`; 
+    
+
+    // input.innerHTML += "<input type='radio' name='options' value='a'><label> a: " + quizQuestions[count].answers.a + "</label><br>"; 
+    // console.log("This is a " + input.innerHTML);
+    // console.log(quizQuestions[count].answers.a)
+    // input.innerHTML += "<input type='radio' name='options' value='b'><label> b: " + quizQuestions[count].answers.b + "</label><br>";
+    // console.log("This is b " + input.innerHTML);
+    // input.innerHTML += "<input type='radio' name='options' value='c'><label> c: " + quizQuestions[count].answers.c + "</label><br>";
+    // console.log("This is c " + input.innerHTML);
+
+    
+    
+    checkResponse();
 }
 
+function checkResponse(){ 
 
+    for(var i=0; i< input.length; i++){
+        if(input[i].checked === true){
+            console.log("Input is: " + input);
+            console.log("Input checked is " + input[i].checked);
+            console.log("Input value is " +input[i].value);
+            // console.log("Correct answer is " + quizQuestions[input.value].correctAnswer);
 
+            testScore++;
+            count++;
+        } else {
+            testScore--;
+            count++;
+        }          
+    } 
+}
+
+// input[i].value === quizQuestions[input.value].correctAnswer
 startTestEl.addEventListener("click", startQuiz);
+checkButton.addEventListener("click", checkResponse);
 stopTestEl.addEventListener("click",stopQuiz);
