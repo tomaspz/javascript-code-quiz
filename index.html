@@ -21,18 +21,20 @@
         
     </head>
     <body>
+
         <!-- The header contains the page main title, the timer and the score -->
+
         <header class="container-fluid">
             <div class="row">
                 <div class="col-md-2 h4 text-center">
-                    <h4>Timer</h4>
+                    <h5>Timer</h5>
                     <button type="button" id="timer" class="btn btn-default btn-lg">0</button>
                 </div>
                 
                 <h1 class="col-md-8 justify-content-center">Javascript Code Quiz</h1>
 
                 <div class="col-md-2 h4 text-center">
-                    <h4>Score</h4>
+                    <h5>Score</h5>
                     <button type="button" id="score" class="btn btn-default btn-lg">0</button>
                 </div>
                 
@@ -41,31 +43,55 @@
       
         <main class="container-fluid"> 
             
-            <!-- Section that contains the start and stop buttons -->
+            <!-- This section contains the start and stop buttons -->
+
             <section>
                 <div id="divStartStop">
-                    <button type="button" name="Start Quiz" id="startButton" class="btn col-xs-12 col-sm-12 col-md-6">Start Quiz</button>
-                    <button type="button" name="End Quiz" id="stopButton" class="btn col-xs-12 col-sm-12 col-md-6">End Quiz</button>
+
+                    <button type="button" name="Start Quiz" id="startButton" class="btn col-xs-12 col-sm-12 col-md-4">Start Quiz</button>
+                    
+                    <button type="button" name="End Quiz" id="stopButton" class="btn col-xs-12 col-sm-12 col-md-4 pull-right">End Quiz</button>
+                    
                 </div>
-            </section>
+            </section id="sec">
             
-            <!-- Section that will contain the questions/answers of the quiz -->
+            <!-- This section  will contain the dynamically created questions/answers of the quiz -->
+
             <section >
-                <div id="questionTitle" class="row justify-content-center">
+                <div id="questionTitle" class="row">
+                    
                     <div id="quiz" class="col-12">
-                        <h4 id="question" class="text-center"></h4>
-                        <p id="answers" class="text-center"></p>
+
+                        <div class="font-weight-bold">
+                            <p id="question"></p>
+                        </div>
+                          
+                        <div id="answers" >
+                       
+                        </div>
+                        
+                    </div>
                 </div>  <!-- End of row -->
-                
+
+                <!-- This row contains the button that checks the results -->
+
+                <div class="row text-center">
+                    <div class="col-12">
+                        <button type="button" name="" id="checkButton" class="btn btn-primary">Check Answer    
+                        </button>
+                    </div>
+                </div>
             </section>
            
         </main>
                     
         <footer>
             <!-- Copyright notice and author -->
+
             <div class="footer-copyright text-center py-3">© 2020 Copyright:
             <a href="https://github.com/tomaspz/javascript-code-quiz"> Tomás Pérez Zafón</a>
             </div>
+
         </footer>
 
 
@@ -83,10 +109,13 @@
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
-        <!-- Loading the script that contains the quiz questions -->
+        <!-- Loads the script that contains the quiz questions -->
+
         <script src="./assets/js/quizQuestions.js" async defer></script>
         
-        <!-- Loading the javascript file with main logic and DOM manipulation -->
+        <!-- Loads the main javascript file with logic and DOM manipulation -->
+
         <script src="./assets/js/script.js" async defer></script>
+        
     </body>
 </html>
