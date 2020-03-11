@@ -12,7 +12,7 @@ var startTestEl = document.getElementById("startButton");
 var stopTestEl = document.getElementById("stopButton");
 var timerEl = document.getElementById("timer");
 
-var radioButton = answersEl.createElement("input");
+var radioButton = document.createElement("input");
 
 var source = {
     type: 'radio',
@@ -33,8 +33,8 @@ Object.assign(radioButton, source);
 var choices = ["a", "b", "c"];
 for(var i =0; i<choices.length; i++) {
     source.name = choices[i];
-    source.value = quizQuestions.answers[choices[i]];
-    source.label = quizQuestions.answers[choices[i]];
+    source.value = quizQuestions.answers.choices[i];
+    source.label = quizQuestions.answers.choices[i];
 }
 
 document.body.appendChild(radioButton);

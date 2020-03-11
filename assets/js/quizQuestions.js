@@ -1,56 +1,32 @@
 const quizQuestions = [
     {
         question: "Who invented JavaScript?",
-        answers: {
-            a: "Douglas Crockford",
-            b: "Sheryl Sandberg",
-            c: "Brendan Eich"
-        },
+        answers: ["Douglas Crockford","Sheryl Sandberg","Brendan Eich"],
         correctAnswer: "c"
     },
     {
         question: "Which one of these is a JavaScript package manager?",
-        answers: {
-            a: "Node.js",
-            b: "TypeScript",
-            c: "npm"
-        },
+        answers: ["Node.js","TypeScript","npm"],
         correctAnswer: "c"
     },
     {
         question: "Which tool can you use to ensure code quality?",
-        answers: {
-            a: "jQuery",
-            b: "RequireJS",
-            c: "ESLint"
-        },
+        answers: ["jQuery","RequireJS","ESLint"],
         correctAnswer: "c"
     },
     {
-        question: "The statement 'let a = b = 0;' inside a function. Does it create any global variables?",
-        answers: {
-            a: "No, both a and b are local variables of the function",
-            b: "Yes, both a and b are global variables",
-            c: "Yes, only b is a global variable since it is not declared"
-        },
+        question: "If let a = b = 0 is inside a function. Does it create any global variables?",
+        answers: ["No, both a and b are local variables of the function","Yes, both a and b are global variables","Yes, only b is a global variable since it is not declared"],
         correctAnswer: "c"
     },
     {
-        question: "The statement 'i = 0;' inside a for loop. Does it create a global variable?",
-        answers: {
-            a: "No, the variable is local to the for loop",
-            b: "Yes, the variable i is a global variable",
-            c: "Yes and no, it depends where the for loop is located"
-        },
+        question: "If i = 0; inside a for loop ... does it create a global variable?",
+        answers: ["No. The variable is local to the for loop","Yes. The variable i is a global variable","Yes and no. It depends where the for loop is located"],
         correctAnswer: "b"
     },
     {
         question: "You have an array called 'clothes' with 4 elements. If you do 'clothes.length = 0', how can you access the third element of the array?",
-        answers: {
-            a: "You can not access any element of the array",
-            b: "Yes, by typing 'clothes[2]'",
-            c: "Yes, by typing 'clothes[3]'"
-        },
+        answers: ["You can not access any element of the array","Yes, by typing 'clothes[2]'","Yes, by typing 'clothes[3]'"],
         correctAnswer: "a"
     },
   ];
