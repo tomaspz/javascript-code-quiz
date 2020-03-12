@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javascript Code Quiz</title>
+        <meta name="description" content="This javascript code quiz is a complete a coding assessment made with Web APIs.
+        The quiz is a combination of multiple-choice questions and interactive challenges.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Load Bootstrap css -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Load the customized css file -->
+
+        <link rel="stylesheet" href="./assets/css/style.css">
+        
+    </head>
+    <body>
+
+        <!-- The header contains the page main title, the timer and the score -->
+
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 h4 text-center">
+                    <h5>Timer</h5>
+                    <button type="button" id="timer" class="btn btn-default btn-lg">0</button>
+                </div>
+                
+                <h1 class="col-md-8 justify-content-center">Javascript Code Quiz</h1>
+
+                <div class="col-md-2 h4 text-center">
+                    <h5>Score</h5>
+                    <button type="button" id="score" class="btn btn-default btn-lg">0</button>
+                </div>
+                
+            </div> 
+        </header>
+      
+        <main class="container-fluid"> 
+            
+            <!-- This section contains the start and stop buttons -->
+
+            <section>
+                <div id="divStartStop">
+
+                    <button type="button" name="Start Quiz" id="startButton" class="btn col-xs-12 col-sm-12 col-md-4">Start Quiz</button>
+                    
+                    <button type="button" name="End Quiz" id="stopButton" class="btn col-xs-12 col-sm-12 col-md-4 pull-right">End Quiz</button>
+                    
+                </div>
+            </section id="sec">
+            
+            <!-- This section  will contain the dynamically created questions/answers of the quiz -->
+
+            <section >
+                <div id="questionTitle" class="row">
+                    
+                    <div id="quiz" class="col-12">
+
+                        <div class="font-weight-bold">
+                            <p id="question"></p>
+                        </div>
+                          
+                        <div id="answers" class="custom-control custom-radio">
+                       
+                        </div>
+                        
+                    </div>
+                </div>  <!-- End of row -->
+
+                <!-- This row contains the button that checks the results -->
+
+                <div class="row text-center">
+                    <div class="col-12">
+                        <button type="button" name="" id="checkButton" class="btn btn-primary">Check Answer    
+                        </button>
+                    </div>
+                </div>
+            </section>
+           
+        </main>
+                    
+        <footer>
+            <!-- Copyright notice and author -->
+
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://github.com/tomaspz/javascript-code-quiz"> Tomás Pérez Zafón</a>
+            </div>
+
+        </footer>
+
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- Scripts required to work with Bootstrap -->
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        <!-- Loads the script that contains the quiz questions -->
+
+        <script src="./assets/js/quizQuestions.js" async defer></script>
+        
+        <!-- Loads the main javascript file with logic and DOM manipulation -->
+
+        <script src="./assets/js/script.js" async defer></script>
+        
+    </body>
+</html>
