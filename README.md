@@ -16,8 +16,7 @@ It stores high scores to gauge the student progress along the test.
 
 2.- After the user answers a question, another question is presented.
 
-3.- When the user answers a question incorrectly, the score does not increase.
-(time is subtracted from the clock????)
+3.- When the user answers a question incorrectly, the score does not increase. Time is subtracted from the clock
 
 4.- When all questions are answered or the timer reaches 0, the game is over.
 
@@ -29,6 +28,10 @@ It stores high scores to gauge the student progress along the test.
 
 ## Link to the functional, deployed application.
 
+
+
 ## Link to the GitHub repository. 
+
+
 
 
