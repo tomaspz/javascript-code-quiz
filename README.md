@@ -22,16 +22,17 @@ It stores high scores to gauge the student progress along the test.
 
 5.- When the game is over, save the user initials and the score.
 
-## The following gif animation demonstrates the application functionality:
+## Application screenshot:
 
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
+![code quiz](./assets/images/app_screenshot.png)
 
 ## Link to the functional, deployed application.
 
-
+https://tomaspz.github.io/javascript-code-quiz/
 
 ## Link to the GitHub repository. 
 
+https://github.com/tomaspz/javascript-code-quiz
 
 
 
