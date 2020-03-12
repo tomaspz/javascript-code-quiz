@@ -62,20 +62,32 @@ function displayQuestionWithAnswers(){
 
 function checkResponse(){ 
 
-    for(var i=0; i< 3; i++){
+    for(var i=0; i<3; i++){
 
         if(answersEl.children[i].checked === true && answersEl.children[i].id === quizQuestions[i].correctAnswer) {
             testScore++;
+            console.log(testScore);
             count++;
+            console.log(count);
             displayQuestionWithAnswers();
-        } else {
-            alert("Sorry, this is the wrong answer. The test will reset automatically.")
-            stopQuiz();
-        }   
-    } 
+        } 
+    }
+    
+    alert("Wrong answer!");
+    stopQuiz();
 };
 
-function askUser(){
+function registerUser(){
+
+    answersEl.innerHTML = 
+        `<form>
+            <div class="form-group">
+                <label for="inputInitials">Your initials</label>
+                <input type="text" class="form-control" id="initials" placeholder="Enter your initials">
+            </div>
+        </form>`;
+    
+    var score = localStorage.setItem("score", testScore);
 
 };
 
